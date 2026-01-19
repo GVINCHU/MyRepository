@@ -1,0 +1,12 @@
+services:
+  spring-boot-app:
+    image: spring-boot-demo-app:latest
+    container_name: spring-boot-app
+    ports:
+      - "9090:8081"   # host 9090 -> container 8081
+
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "8080:80"     # host 8080 -> container 80
